@@ -33,7 +33,7 @@ const src = "https://papertrailapp.com/api/v1/events/search.json";
 var query1 = "?q=%22%2Fapi%2Fqualis%2Fissn%22"; //consultas a api até o limite de 1000
 var query2 = "?q=Idling%20OR%20Unidling"; //todos os sleeping idling and unidling
 var query3 = "?limit=10000"; //tudo até o limite de 10000
-// var query = "?q=%22heroku%2Fweb.1%22"; //tudo do heroku/web.1
+
 
 const options = {
   headers: {
