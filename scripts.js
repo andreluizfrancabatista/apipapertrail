@@ -51,6 +51,7 @@ function callTheApi(e, url, query) {
       document.getElementById("res").innerHTML = syntaxHighlight(
         JSON.stringify(data, undefined, 4)
       );
+      console.log(opt);
       document.getElementsByClassName(opt)[1].innerHTML =
         "Number of events: " + data["events"].length;
     })
