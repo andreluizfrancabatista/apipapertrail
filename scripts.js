@@ -43,8 +43,8 @@ const options = {
 };
 
 function callTheApi(e, url, query) {
-  let opt = e.target.classList[1];
-  fetch(url+query, options)
+  let opt = e.target.classList[0];
+  fetch(url + query, options)
     .then((res) => res.json())
     .then((data) => {
       //console.log(data);
@@ -53,12 +53,15 @@ function callTheApi(e, url, query) {
       );
       document.getElementsByClassName(opt)[1].innerHTML =
         "Number of events: " + data["events"].length;
-    });
+    })
+    .catch((erro) => {
+      console.log("Erro: " + error);
+    })
 }
 
-document.getElementById("btn1").addEventListener("click", function (e) {callTheApi(e, src, query1)});
-document.getElementById("btn2").addEventListener("click", function (e) {callTheApi(e, src, query2)});
-document.getElementById("btn3").addEventListener("click", function (e) {callTheApi(e, src, query3)});
+document.getElementById("btn1").addEventListener("click", function (e) { callTheApi(e, src, query1) });
+document.getElementById("btn2").addEventListener("click", function (e) { callTheApi(e, src, query2) });
+document.getElementById("btn3").addEventListener("click", function (e) { callTheApi(e, src, query3) });
 document.getElementById("btn4").addEventListener("click", function (e) {
   document.getElementById("res").classList.toggle("hide-json");
 });
