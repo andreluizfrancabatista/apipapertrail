@@ -1,0 +1,4 @@
+Para atualizar o git
+git add .
+git commit -m "Comentário"
+git push origin master
