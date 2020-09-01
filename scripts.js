@@ -30,7 +30,7 @@ function syntaxHighlight(json) {
 let apitoken = "TUl0cJPncryqbq7f66j";
 const url = "https://papertrailapp.com/api/v1/systems.json";
 const src = "https://papertrailapp.com/api/v1/events/search.json";
-var query1 = "?q=%22%2Fapi%2Fqualis%2Fv%22&limit=10000"; //consultas a api até o limite de 1000
+var query1 = "?q=%2Fapi%2Fqualis%2Fv%26limit%3D10000"; //consultas a api até o limite de 1000
 var query2 = "?q=Idling%20OR%20Unidling"; //todos os sleeping idling and unidling
 var query3 = "?limit=10000"; //tudo até o limite de 10000
 
